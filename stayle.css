@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+
+.contenr {
+    background-color: #222;
+    width: 80vw;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.img img,
+canvas {
+    max-width: 45vw;
+    max-height: 60vh;
+    z-index: 10;
+}
+
+.uplad input {
+    display: none;
+}
+
+.uplad label {
+    color: #fff;
+    padding: 8px 20px;
+    cursor: pointer;
+    border: 2px #fff dashed;
+}
+
+.flters ul {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    direction: rtl;
+}
+
+.flters ul li {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.flters ul li {
+    color: #fff;
+}
+
+.flters ul li:last-child {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flters ul li span {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #060;
+}
+
+.flters ul li a {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #060;
+}
+
+@media screen and (max-width: 650px) {
+    .contenr {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .img img,
+    canvas {
+        max-width: 80vw;
+    }
+}
